@@ -24,15 +24,13 @@ class Solution:
     def removeDuplicates(self,head):
         if head is None or head.next is None:
             return head
-        
         current = head
     
         while current.next:
             if current.data == current.next.data:
                 current.next = current.next.next
             else:
-                current = current.next
-            
+                current = current.next 
         return head
 
 mylist= Solution()
